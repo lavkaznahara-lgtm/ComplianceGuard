@@ -317,3 +317,11 @@ ComplianceGuard/
 - Results come from single runs: repeated runs and confidence intervals are not implemented, so small differences can be noise.
 - Citation checking verifies that a quote exists, not that it supports the finding.
 - Cost uses the provider's usage block when present; the tiktoken count is a fallback.
+
+## 📫 Contact & Connect
+
+I'm open to questions, suggestions, or job opportunities in AI Safety and LLM Evaluation:
+
+- 💼 **LinkedIn:** [Ruslan](https://www.linkedin.com/in/ВАШ_ПРОФИЛЬ/)
+- ✈️ **Telegram:** [@RR_WEB](https://t.me/RR_WEB)
+- 📧 **Email:** [lavkaznahara@gmail.com](mailto:lavkaznahara@gmail.com)
