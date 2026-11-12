@@ -1,0 +1,51 @@
+# ComplianceGuard configuration.
+# Precedence (highest first): init arguments > environment variables (CG_*) >
+# .env > this file > defaults. Nested keys use a double underscore, e.g.
+#   CG_MODEL__NAME=gpt-4o-mini   CG_API__MAX_RETRIES=3
+# The API key is read from OPENAI_API_KEY (never put it in this file).
+
+model:
+  name: gpt-4o
+  temperature: 0.0          # set to null to omit (models that reject temperature)
+  max_tokens: 1500
+
+api:
+  timeout: 60.0             # seconds per request
+  max_retries: 5            # retries after the first attempt (exponential backoff)
+  base_url: https://api.openai.com/v1
+  json_mode: true           # request response_format={"type": "json_object"}
+  token_param: max_tokens   # or max_completion_tokens for models that require it
+  retry_initial_wait: 1.0   # seconds
+  retry_max_wait: 30.0      # seconds
+
+evaluation:
+  fuzzy_match_threshold: 0.85   # citation must match a log line at least this well
+  min_quote_chars: 12           # shorter quotes must match exactly
+  concurrency: 5                # simultaneous API calls
+  checkpoint_path: results_partial.jsonl   # appended after every case
+  output_path: results.jsonl
+  max_cost_usd: null            # stop starting new cases once spend exceeds this
+
+prompts:                        # optional overrides of the built-in prompts
+  system_prompt_path: null
+  user_template_path: null
+
+app:                            # dashboard safety limits
+  max_upload_mb: 5
+  max_cases: 500
+  data_dir: data                # server-side files the UI may load (nothing else)
+  default_budget_usd: 5.0
+
+logging:
+  level: INFO               # DEBUG | INFO | WARNING | ERROR
+  json_format: true
+
+# USD per 1M tokens. Verify against your provider's current price list: a model
+# that is missing here is reported with cost 0.00 and a warning.
+pricing:
+  gpt-4o:
+    input_per_1m: 2.50
+    output_per_1m: 10.00
+  gpt-4o-mini:
+    input_per_1m: 0.15
+    output_per_1m: 0.60

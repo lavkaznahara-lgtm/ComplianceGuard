@@ -1,0 +1,14 @@
+# Lower bounds only (no exact pins). See README "Dependency versions" for what
+# was tested at the minimum and at the newest releases.
+streamlit>=1.37.0
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+PyYAML>=6.0.1
+openai>=1.55.3
+tenacity>=8.2.0
+tiktoken>=0.7.0
+thefuzz>=0.22.1
+plotly>=5.22.0
+pandas>=2.2.2
+tqdm>=4.66.0
+pytest>=8.0.0
