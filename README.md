@@ -322,6 +322,6 @@ ComplianceGuard/
 
 I'm open to questions, suggestions, or job opportunities in AI Safety and LLM Evaluation:
 
-- 💼 **LinkedIn:** [Ruslan](https://www.linkedin.com/in/ВАШ_ПРОФИЛЬ/)
+- 💼 **LinkedIn:** [Жора Покрышкин](https://www.linkedin.com/feed/)
 - ✈️ **Telegram:** [@RR_WEB](https://t.me/RR_WEB)
 - 📧 **Email:** [lavkaznahara@gmail.com](mailto:lavkaznahara@gmail.com)
