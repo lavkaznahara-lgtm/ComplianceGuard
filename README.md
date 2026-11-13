@@ -3,6 +3,7 @@
 ![Tests](https://img.shields.io/badge/tests-77%20passing-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.11+-blue)
 ![Type Checking](https://img.shields.io/badge/mypy-strict-blueviolet)
+🚀 **[Try the Live Demo Here](https://complianceguard-axmpyla3quuh24fnwxjpjx.streamlit.app/)**
 Evaluation harness for **AI support-agent auditors**. It runs an auditor model
 over agent traces (reasoning, tool calls, customer messages), checks that every
 cited quote really exists in the log, and measures **epistemic integrity**:
