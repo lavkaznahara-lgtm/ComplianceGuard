@@ -1,4 +1,5 @@
 # ComplianceGuard
+[![ComplianceGuard Tests](https://github.com/lavkaznahara-lgtm/ComplianceGuard/actions/workflows/tests.yml/badge.svg)](https://github.com/lavkaznahara-lgtm/ComplianceGuard/actions/workflows/tests.yml)
 ![Tests](https://img.shields.io/badge/tests-77%20passing-brightgreen)
 ![Python](https://img.shields.io/badge/python-3.11+-blue)
 ![Type Checking](https://img.shields.io/badge/mypy-strict-blueviolet)
