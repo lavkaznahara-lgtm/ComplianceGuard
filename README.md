@@ -100,6 +100,11 @@ The container runs as an unprivileged user (uid 10001); a bind-mounted `runs/`
 folder must be writable by it. The image contains no key and no test or result files.
 
 ## Dashboard
+## Visual Proof
+
+### 1. Catching Epistemic Failures
+Here is a batch run where the auditor missed or hallucinated categories in 60% of the cases. The dashboard immediately highlights this red flag.
+<img width="1895" height="863" alt="Screenshot_7287" src="https://github.com/user-attachments/assets/c42637c9-460c-4d9a-b963-c347fbf3643f" />
 
 | Tab | What it does |
 |---|---|
