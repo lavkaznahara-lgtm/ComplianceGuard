@@ -4,8 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.11+-blue)
 ![Type Checking](https://img.shields.io/badge/mypy-strict-blueviolet)
 🚀 **[Try the Live Demo Here](https://complianceguard-axmpyla3quuh24fnwxjpjx.streamlit.app/)**
-Evaluation harness for **AI support-agent auditors**. It runs an auditor model<img width="1076" height="617" alt="Screenshot_7055" src="https://github.com/user-attachments/assets/4ba4ec38-38bb-443c-bd03-44dcbf6bb996" />
-
+Evaluation harness for **AI support-agent auditors**. It runs an auditor model
 over agent traces (reasoning, tool calls, customer messages), checks that every
 cited quote really exists in the log, and measures **epistemic integrity**:
 how often the auditor is *confidently wrong or incomplete* ("machine blindness"),
@@ -239,6 +238,7 @@ breakdown and the `outcomes` counts use these names.
 
 ## Testing
 <img width="1076" height="617" alt="Screenshot_7055" src="https://github.com/user-attachments/assets/4ba4ec38-38bb-443c-bd03-44dcbf6bb996" />
+
 ```bash
 python -m pytest        # 77 passing tests: strict citation crediting, gold matching, JSON extraction/repair, schemas
 ```
