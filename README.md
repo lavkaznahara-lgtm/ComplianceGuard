@@ -105,6 +105,9 @@ folder must be writable by it. The image contains no key and no test or result f
 ### 1. Catching Epistemic Failures
 Here is a batch run where the auditor missed or hallucinated categories in 60% of the cases. The dashboard immediately highlights this red flag.
 <img width="1895" height="863" alt="Screenshot_7287" src="https://github.com/user-attachments/assets/c42637c9-460c-4d9a-b963-c347fbf3643f" />
+### 2. Forensic Case Inspection
+Clicking on a case reveals exactly *why* the auditor failed. Here, the auditor hallucinated an extra category (`DATA_LEAKAGE`) that didn't exist in the ground truth.
+<img width="1893" height="866" alt="Screenshot_7056" src="https://github.com/user-attachments/assets/900a066b-e017-4efa-a94b-d3d1a2733b83" />
 
 | Tab | What it does |
 |---|---|
