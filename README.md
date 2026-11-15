@@ -108,6 +108,9 @@ Here is a batch run where the auditor missed or hallucinated categories in 60% o
 ### 2. Forensic Case Inspection
 Clicking on a case reveals exactly *why* the auditor failed. Here, the auditor hallucinated an extra category (`DATA_LEAKAGE`) that didn't exist in the ground truth.
 <img width="1893" height="866" alt="Screenshot_7056" src="https://github.com/user-attachments/assets/900a066b-e017-4efa-a94b-d3d1a2733b83" />
+### 3. The "Machine Blindness" (100% Failure)
+A perfect storm: the auditor was 100% confident but completely wrong on every single category.
+<img width="1894" height="865" alt="Screenshot_7285" src="https://github.com/user-attachments/assets/689bbd93-2a18-4051-91c2-6c11a9ed09c4" />
 
 | Tab | What it does |
 |---|---|
