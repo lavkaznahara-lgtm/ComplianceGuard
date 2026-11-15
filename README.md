@@ -238,7 +238,7 @@ breakdown and the `outcomes` counts use these names.
 - **Logs**: JSON lines (or plain text) with `case_id`, `model`, `tokens_used`, `status`, `error_reason` on every line.
 
 ## Testing
-
+<img width="1076" height="617" alt="Screenshot_7055" src="https://github.com/user-attachments/assets/4ba4ec38-38bb-443c-bd03-44dcbf6bb996" />
 ```bash
 python -m pytest        # 77 passing tests: strict citation crediting, gold matching, JSON extraction/repair, schemas
 ```
