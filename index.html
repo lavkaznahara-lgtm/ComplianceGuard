@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComplianceGuard - AI Safety Auditor</title>
-    <meta name="description" content="An independent auditor that analyzes AI agent behavior at the level of reasoning, actions, and evidence.">
-    <!-- Redirect to Streamlit (Update this URL after changing it in Streamlit settings) -->
-    <meta http-equiv="refresh" content="0; url=https://YOUR-NEW-STREAMLIT-URL.streamlit.app/">
+    <title>ComplianceGuard — AI Safety & Epistemic Integrity Auditor</title>
+    <meta name="description" content="Open-source evaluation harness for AI support-agent auditors. Detects machine blindness, hallucinated citations, and policy violations. Measures epistemic integrity.">
+    <meta name="keywords" content="AI safety, LLM evaluation, machine blindness, hallucination detection, AI auditor, epistemic integrity, ComplianceGuard">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lavkaznahara-lgtm.github.io/ComplianceGuard/">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f6f8fa;
-            color: #24292f;
-        }
-        .container {
-            text-align: center;
-        }
-        a {
-            color: #0969da;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #24292f; background: #f6f8fa; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-top: 40px; }
+        h1 { color: #0969da; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2em; color: #57606a; margin-bottom: 30px; }
+        .btn { display: inline-block; background: #2da44e; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1.1em; margin: 20px 0; transition: background 0.2s; }
+        .btn:hover { background: #2c974b; }
+        .features { background: #f6f8fa; padding: 20px; border-radius: 6px; margin: 20px 0; }
+        .features ul { margin: 0; padding-left: 20px; }
+        .features li { margin-bottom: 8px; }
+        footer { text-align: center; margin-top: 40px; color: #8b949e; font-size: 0.9em; }
     </style>
+    <!-- Мягкий редирект через 8 секунд (даст Googlebot время прочитать текст, но уведет человека в демо) -->
+    <meta http-equiv="refresh" content="8; url=https://complianceguard-axmpyla3quuh24fnwxjpjx.streamlit.app/">
 </head>
 <body>
     <div class="container">
         <h1>ComplianceGuard</h1>
-        <p>Redirecting to the live demo...</p>
-        <p>If you are not redirected automatically, <a href="https://YOUR-NEW-STREAMLIT-URL.streamlit.app/">click here</a>.</p>
+        <p class="subtitle">Evaluation harness for AI support-agent auditors. Measuring epistemic integrity and detecting "machine blindness".</p>
+        
+        <a href="https://complianceguard-axmpyla3quuh24fnwxjpjx.streamlit.app/" class="btn">🚀 Try the Live Demo</a>
+        <p><small>(Redirecting to demo in 8 seconds...)</small></p>
+
+        <div class="features">
+            <h3>Key Capabilities</h3>
+            <ul>
+                <li><strong>Fuzzy Citation Verification:</strong> Checks that every cited quote really exists in the agent's log (hallucinated quotes earn no credit).</li>
+                <li><strong>Epistemic Integrity Metrics:</strong> Measures how often the auditor is <em>confidently wrong or incomplete</em>, not just wrong.</li>
+                <li><strong>Async Batch Pipeline:</strong> Retries, checkpoints, cost tracking, and strict budget caps.</li>
+                <li><strong>Demo Mode:</strong> Streamlit dashboard with pre-baked simulated records, requiring no API key.</li>
+            </ul>
+        </div>
+
+        <h3>About the Project</h3>
+        <p>ComplianceGuard is an independent auditor that analyzes AI agent behavior at the level of reasoning, actions, and evidence. It detects policy violations, data leaks, social engineering, and guardrail bypasses, preserving the "scars" of machine representation failures as actionable data.</p>
+        
+        <p>🔗 <a href="https://github.com/lavkaznahara-lgtm/ComplianceGuard">View Source Code on GitHub</a></p>
+
+        <footer>
+            <p>© 2026 ComplianceGuard. Open-source under MIT License.</p>
+        </footer>
     </div>
 </body>
 </html>
