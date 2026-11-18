@@ -1,14 +1,13 @@
 # ComplianceGuard
-[![ComplianceGuard Tests](https://github.com/lavkaznahara-lgtm/ComplianceGuard/actions/workflows/tests.yml/badge.svg)](https://github.com/lavkaznahara-lgtm/ComplianceGuard/actions/workflows/tests.yml)
-![Tests](https://img.shields.io/badge/tests-77%20passing-brightgreen)
-![Python](https://img.shields.io/badge/python-3.11+-blue)
-![Type Checking](https://img.shields.io/badge/mypy-strict-blueviolet)
-🚀 **[Try the Live Demo Here] https://complianceguard.streamlit.app/
-Evaluation harness for **AI support-agent auditors**. It runs an auditor model
-over agent traces (reasoning, tool calls, customer messages), checks that every
-cited quote really exists in the log, and measures **epistemic integrity**:
-how often the auditor is *confidently wrong or incomplete* ("machine blindness"),
-not only how often it is wrong.
+
+![Tests](https://img.shields.io/badge/tests-77%20passing-green) ![Python](https://img.shields.io/badge/python-3.11%2B-blue) ![Type Checking](https://img.shields.io/badge/mypy--strict-clean-brightgreen)
+
+🚀 **[Try the Live Demo →](https://complianceguard.streamlit.app/)**
+
+> Evaluation harness for AI support‑agent auditors. It runs an auditor model over agent
+> traces (reasoning, tool calls, customer messages), verifies that every cited quote
+> really exists in the log, and measures **epistemic integrity** — how often the auditor
+> is *confidently* wrong or incomplete ("machine blindness"), not merely wrong.
 
 - Async batch pipeline with retries, checkpoints, cost tracking and a budget cap
 - Fuzzy citation verification (a hallucinated quote earns no credit)
