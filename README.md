@@ -1,50 +1,30 @@
-# ComplianceGuard
+# 🛡️ ComplianceGuard: Auditing the Auditor
 
 ![Tests](https://img.shields.io/badge/tests-77%20passing-green) ![Python](https://img.shields.io/badge/python-3.11%2B-blue) ![Type Checking](https://img.shields.io/badge/mypy--strict-clean-brightgreen)
 
-🚀 **[Try the Live Demo →](https://complianceguard.streamlit.app/)**
+🚀 **[Try the Live Demo Here (No API Key Required)](https://complianceguard.streamlit.app/)**
 
-> Evaluation harness for AI support‑agent auditors. It runs an auditor model over agent
-> traces (reasoning, tool calls, customer messages), verifies that every cited quote
-> really exists in the log, and measures **epistemic integrity** — how often the auditor
-> is *confidently* wrong or incomplete ("machine blindness"), not merely wrong.
+> **Evaluation harness for AI support-agent auditors.** It runs an auditor model over agent traces (reasoning, tool calls, customer messages), verifies that every cited quote *actually exists* in the log, and measures **epistemic integrity**: how often the auditor is *confidently* wrong or incomplete ("machine blindness"), not merely wrong.
+> 
+> *Unlike tools that only audit agent boundary compliance (e.g., HarnessAudit), ComplianceGuard audits the auditor itself, exposing confident hallucinations and silent misses.*
 
-- Async batch pipeline with retries, checkpoints, cost tracking and a budget cap
-- Fuzzy citation verification (a hallucinated quote earns no credit)
-- Streamlit dashboard with a **Demo Mode that needs no API key**
-- Typed, tested, container-ready
+### 📊 What ComplianceGuard Measures
+| Metric | What it means for you |
+|---|---|
+| **Epistemic Failure Rate** | How often the auditor is *confidently* wrong or misses categories ("machine blindness"). |
+| **Citation Verification** | Percentage of auditor quotes that genuinely exist in the log (hard defense against hallucinations). |
+| **Confidence-Correctness Delta** | The gap between the model's stated confidence and its actual accuracy. |
+| **Full Accuracy** | Strict passing: correct verdict + exact categories + every quote verified at its cited step. |
 
-> **Demo data is simulated.** Demo Mode and the `--demo` flag use a built-in
-> simulated auditor. Their numbers illustrate the dashboard; they are not
-> measurements of any real model.
+### ✨ Key Features
+- **Async batch pipeline** with retries, checkpoints, and strict budget caps.
+- **Fuzzy citation verification**: a hallucinated or misattributed quote earns zero credit.
+- **Streamlit Dashboard** with a built-in **Demo Mode** (120 pre-baked records, zero API calls needed to explore).
+- **Typed, tested, and container-ready** (`mypy --strict` clean, 77+ passing tests).
 
-## Architecture
+---
 
-```mermaid
-flowchart LR
-    CFG["config.yaml<br/>CG_* env, OPENAI_API_KEY"] --> C["config.py<br/>validated settings,<br/>JSON logging"]
-    D["cases (JSONL / JSON)"] --> M
-    C --> A["api_client.py<br/>AsyncOpenAI + tenacity retries,<br/>tiktoken, cost<br/>(or simulated client)"]
-    A -->|"raw reply, tokens, USD"| V["validator.py<br/>JSON extraction,<br/>fuzzy citation check,<br/>ground-truth matching"]
-    V --> M["main.py<br/>batch orchestrator<br/>Semaphore(5), checkpoints"]
-    M --> K["core/metrics.py<br/>single source of truth:<br/>grading, outcomes, epistemic metrics"]
-    M --> U["app.py<br/>Streamlit dashboard"]
-    K --> U
-```
-
-```text
- cases ──► main.py ──► api_client.py ──► LLM (or simulated auditor)
-              │             │
-              │             └─ retries, token + cost accounting
-              ▼
-         validator.py  (parse JSON, verify each quote against ONE log line)
-              │
-              ▼
-   results_partial.jsonl (after every case) ──► results.jsonl
-              │
-              ▼
-   core/metrics.py ──► app.py (charts, cost, filters, case inspector)
-```
+## Quick start
 
 ## Quick start
 
