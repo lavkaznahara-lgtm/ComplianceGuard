@@ -26,8 +26,6 @@
 
 ## Quick start
 
-## Quick start
-
 Requires Python 3.11+.
 
 ```bash
