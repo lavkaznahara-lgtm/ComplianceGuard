@@ -1,7 +1,7 @@
 # Lower bounds only (no exact pins). See README "Dependency versions" for what
 # was tested at the minimum and at the newest releases.
 streamlit>=1.37.0
-pydantic>=2.7.0
+pydantic>=2.14.4
 pydantic-settings>=2.16.3
 PyYAML>=6.0.1
 openai>=3.51.0
